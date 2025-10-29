@@ -13,7 +13,7 @@ st.write(pd.DataFrame({
 
 st.write("Streamlit supports a wide range of data visualizations, including [Plotly, Altair, and Bokeh charts](https://docs.streamlit.io/develop/api-reference/charts). 📊 And with over 20 input widgets, you can easily make your data interactive!")
 
-all_users = ["jy", "gy", "sy", "sh"]
+all_users = ["v", "vv", "vvv"]
 with st.container(border=True):
     users = st.multiselect("Users", all_users, default=all_users)
     rolling_average = st.toggle("Rolling average")
@@ -26,4 +26,3 @@ if rolling_average:
 tab1, tab2 = st.tabs(["Chart", "Dataframe"])
 tab1.line_chart(data, height=250)
 tab2.dataframe(data, height=250, use_container_width=True)
-
